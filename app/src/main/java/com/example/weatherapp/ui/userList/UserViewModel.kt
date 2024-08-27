@@ -34,6 +34,10 @@ class UserViewModel(context : Context) : ViewModel() {
 
     fun removeUserList(item: UserEntity) {
         _userList.value?.remove(item)
+        viewModelScope.launch {
+            database.deleteUser(item)
+        }
+
         getUserList()
     }
 }
