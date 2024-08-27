@@ -9,12 +9,13 @@ import com.example.weatherapp.ui.login.LoginScreen
 import com.example.weatherapp.ui.onboarding.OnboardingScreen
 import com.example.weatherapp.ui.userList.UserListScreen
 import com.example.weatherapp.ui.userform.UserFormScreen
+import com.example.weatherapp.ui.weather.WeatherScreen
 
 @Composable
 fun AppNavigation(navController: NavHostController, modifier: Modifier = Modifier) {
     NavHost(
         navController = navController,
-        startDestination = "onboarding",
+        startDestination = "userList",
         modifier = modifier
     ) {
         composable("onboarding") {
@@ -36,10 +37,10 @@ fun AppNavigation(navController: NavHostController, modifier: Modifier = Modifie
                 onAddUserClick = {
                     navController.navigate("userForm")
                 }
-                /*,
+                ,
                 onUserClick = {
                     navController.navigate("weather")
-                }*/
+                }
             )
         }
         composable("userForm") {
@@ -52,23 +53,18 @@ fun AppNavigation(navController: NavHostController, modifier: Modifier = Modifie
                 }
             )
         }
-        /*
-
-
-
-
 
         composable("weather") {
             WeatherScreen(
-                onBackClick = {
+                /*onBackClick = {
                     navController.popBackStack()
                 },
                 onLogoutClick = {
                     navController.navigate("login") {
                         popUpTo("onboarding") { inclusive = true }
                     }
-                }
+                }*/
             )
-        }*/
+        }
     }
 }

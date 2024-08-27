@@ -48,12 +48,6 @@ fun UserFormScreen(
 //                keyboardManager?.hide()
             }
     ) {
-        SideEffect {
-            Log.d(
-                "##DEV",
-                "Is Side Efect ${viewModel.firstName.value} - ${viewModel.lastName.value} - ${viewModel.email.value}"
-            )
-        }
         Text(
             "Add User", style = TextStyle(
                 fontFamily = FontFamily(Font(com.example.weatherapp.R.font.nunito_extra_bold)),

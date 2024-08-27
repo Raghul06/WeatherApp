@@ -39,7 +39,6 @@ class UserFormViewModel(context : Context) : ViewModel() {
     }
 
     fun onSaveClick() {
-        Log.d("##DEV","Is valid ${firstName.value} - ${lastName.value} - ${email.value}")
         if (validateInput()) {
             viewModelScope.launch {
                 userDao.insertUser(
@@ -52,8 +51,6 @@ class UserFormViewModel(context : Context) : ViewModel() {
                 // Handle navigation or other actions after saving
             }
 
-        }else{
-            Log.d("##DEV","Is invalid")
         }
     }
 }
