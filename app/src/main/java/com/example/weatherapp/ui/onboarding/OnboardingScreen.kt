@@ -32,7 +32,9 @@ fun OnboardingScreen(
             .background(color = Color.White)
             .paint(painter = painterResource(id = R.drawable.onboarding_bg))) {
                 Button(
-                    onClick = { onLoginClick.invoke() },
+                    onClick = {
+                        onLoginClick.invoke()
+                              },
                     Modifier
                         .fillMaxWidth(0.9f)
                         .padding(dimensionResource(id = com.intuit.sdp.R.dimen._20sdp))
