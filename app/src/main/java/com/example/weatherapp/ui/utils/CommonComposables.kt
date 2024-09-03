@@ -115,9 +115,5 @@ class CommonComposable {
                 }
             }
         }
-		
-		fun print(tag : String , message : String){
-			Log.d(tag,message)
-		}
     }
 }
